@@ -5,6 +5,8 @@
 #define HW2_ACCOUNT_H
 #include <thread>
 
+#define DEBUG 1
+
 class Account {
 
 public:
@@ -12,11 +14,15 @@ public:
     ~Account();
 
     int GetAccountNumber();
+    int GetPassword();
     int CheckBalance();
     bool CheckIsVIP ();
     bool ComparePassword(int passwordToCheck);
 
+
     void BecomeVip();
+    void Deposit(int );
+    int Withdrawal(int );   // 0 if succescul   1 if not enough money
 
 private:
     int _accountNumber;

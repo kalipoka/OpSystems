@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/ATM.cpp
+ATM.h
+/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/ATM.h
+
+/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/ATM.h
+thread
+-
+pthread.h
+-
+string
+-
+
 /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Account.cpp
 iostream
 -
@@ -16,11 +28,11 @@ Account.h
 thread
 -
 
-/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Bank.cpp
-Bank.h
-/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Bank.h
+/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/BankDB.cpp
+BankDB.h
+/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/BankDB.h
 
-/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Bank.h
+/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/BankDB.h
 iostream
 -
 list
@@ -29,30 +41,26 @@ string
 -
 thread
 -
+algorithm
+-
 Account.h
 /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Account.h
-Cashier.h
-/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Cashier.h
-
-/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Cashier.cpp
-Cashier.h
-/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Cashier.h
-
-/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Cashier.h
-thread
--
+ATM.h
+/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/ATM.h
 
 /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/main.cpp
 iostream
 -
 Account.h
 /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Account.h
-Bank.h
-/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Bank.h
+BankDB.h
+/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/BankDB.h
 vector
 -
 string
 -
 sstream
+-
+fstream
 -
 

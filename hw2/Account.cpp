@@ -16,6 +16,7 @@ Account::Account(int accountNumber, int password, int balance) {
     _accountNumber = accountNumber;
     _password = password;
     _balance = balance;
+    _isVIP = false;  // be default accounts created not VIP
 
 }
 
@@ -25,6 +26,10 @@ Account::~Account() {
 
 int Account::GetAccountNumber() {
     return _accountNumber;
+}
+
+int Account::GetPassword() {
+    return _password;
 }
 
 int Account::CheckBalance() {
@@ -46,3 +51,19 @@ void Account::BecomeVip() {
     _isVIP = true;
 }
 
+void Account::Deposit(int dipositAmmount) {
+
+    _balance = _balance + dipositAmmount;
+}
+
+int Account::Withdrawal(int withdrawalAmmount) {
+
+    if (withdrawalAmmount > _balance)
+        return 1;
+    else
+    {
+        _balance = _balance - withdrawalAmmount;
+        return 0;  // withdrawal succesfull
+    }
+
+}

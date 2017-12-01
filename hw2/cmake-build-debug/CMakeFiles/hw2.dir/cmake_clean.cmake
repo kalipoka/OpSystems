@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/hw2.dir/main.cpp.o"
   "CMakeFiles/hw2.dir/Account.cpp.o"
-  "CMakeFiles/hw2.dir/Bank.cpp.o"
-  "CMakeFiles/hw2.dir/Cashier.cpp.o"
+  "CMakeFiles/hw2.dir/BankDB.cpp.o"
+  "CMakeFiles/hw2.dir/ATM.cpp.o"
   "hw2.pdb"
   "hw2.exe"
   "libhw2.dll.a"

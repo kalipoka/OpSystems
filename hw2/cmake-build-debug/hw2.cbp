@@ -80,22 +80,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/ATM.cpp">
+			<Option target="hw2"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/ATM.h">
+			<Option target="hw2"/>
+		</Unit>
 		<Unit filename="/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Account.cpp">
 			<Option target="hw2"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Account.h">
 			<Option target="hw2"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Bank.cpp">
+		<Unit filename="/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/BankDB.cpp">
 			<Option target="hw2"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Bank.h">
-			<Option target="hw2"/>
-		</Unit>
-		<Unit filename="/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Cashier.cpp">
-			<Option target="hw2"/>
-		</Unit>
-		<Unit filename="/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Cashier.h">
+		<Unit filename="/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/BankDB.h">
 			<Option target="hw2"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/main.cpp">

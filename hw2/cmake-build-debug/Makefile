@@ -123,6 +123,33 @@ hw2/fast:
 	$(MAKE) -f CMakeFiles/hw2.dir/build.make CMakeFiles/hw2.dir/build
 .PHONY : hw2/fast
 
+ATM.o: ATM.cpp.o
+
+.PHONY : ATM.o
+
+# target to build an object file
+ATM.cpp.o:
+	$(MAKE) -f CMakeFiles/hw2.dir/build.make CMakeFiles/hw2.dir/ATM.cpp.o
+.PHONY : ATM.cpp.o
+
+ATM.i: ATM.cpp.i
+
+.PHONY : ATM.i
+
+# target to preprocess a source file
+ATM.cpp.i:
+	$(MAKE) -f CMakeFiles/hw2.dir/build.make CMakeFiles/hw2.dir/ATM.cpp.i
+.PHONY : ATM.cpp.i
+
+ATM.s: ATM.cpp.s
+
+.PHONY : ATM.s
+
+# target to generate assembly for a file
+ATM.cpp.s:
+	$(MAKE) -f CMakeFiles/hw2.dir/build.make CMakeFiles/hw2.dir/ATM.cpp.s
+.PHONY : ATM.cpp.s
+
 Account.o: Account.cpp.o
 
 .PHONY : Account.o
@@ -150,59 +177,32 @@ Account.cpp.s:
 	$(MAKE) -f CMakeFiles/hw2.dir/build.make CMakeFiles/hw2.dir/Account.cpp.s
 .PHONY : Account.cpp.s
 
-Bank.o: Bank.cpp.o
+BankDB.o: BankDB.cpp.o
 
-.PHONY : Bank.o
-
-# target to build an object file
-Bank.cpp.o:
-	$(MAKE) -f CMakeFiles/hw2.dir/build.make CMakeFiles/hw2.dir/Bank.cpp.o
-.PHONY : Bank.cpp.o
-
-Bank.i: Bank.cpp.i
-
-.PHONY : Bank.i
-
-# target to preprocess a source file
-Bank.cpp.i:
-	$(MAKE) -f CMakeFiles/hw2.dir/build.make CMakeFiles/hw2.dir/Bank.cpp.i
-.PHONY : Bank.cpp.i
-
-Bank.s: Bank.cpp.s
-
-.PHONY : Bank.s
-
-# target to generate assembly for a file
-Bank.cpp.s:
-	$(MAKE) -f CMakeFiles/hw2.dir/build.make CMakeFiles/hw2.dir/Bank.cpp.s
-.PHONY : Bank.cpp.s
-
-Cashier.o: Cashier.cpp.o
-
-.PHONY : Cashier.o
+.PHONY : BankDB.o
 
 # target to build an object file
-Cashier.cpp.o:
-	$(MAKE) -f CMakeFiles/hw2.dir/build.make CMakeFiles/hw2.dir/Cashier.cpp.o
-.PHONY : Cashier.cpp.o
+BankDB.cpp.o:
+	$(MAKE) -f CMakeFiles/hw2.dir/build.make CMakeFiles/hw2.dir/BankDB.cpp.o
+.PHONY : BankDB.cpp.o
 
-Cashier.i: Cashier.cpp.i
+BankDB.i: BankDB.cpp.i
 
-.PHONY : Cashier.i
+.PHONY : BankDB.i
 
 # target to preprocess a source file
-Cashier.cpp.i:
-	$(MAKE) -f CMakeFiles/hw2.dir/build.make CMakeFiles/hw2.dir/Cashier.cpp.i
-.PHONY : Cashier.cpp.i
+BankDB.cpp.i:
+	$(MAKE) -f CMakeFiles/hw2.dir/build.make CMakeFiles/hw2.dir/BankDB.cpp.i
+.PHONY : BankDB.cpp.i
 
-Cashier.s: Cashier.cpp.s
+BankDB.s: BankDB.cpp.s
 
-.PHONY : Cashier.s
+.PHONY : BankDB.s
 
 # target to generate assembly for a file
-Cashier.cpp.s:
-	$(MAKE) -f CMakeFiles/hw2.dir/build.make CMakeFiles/hw2.dir/Cashier.cpp.s
-.PHONY : Cashier.cpp.s
+BankDB.cpp.s:
+	$(MAKE) -f CMakeFiles/hw2.dir/build.make CMakeFiles/hw2.dir/BankDB.cpp.s
+.PHONY : BankDB.cpp.s
 
 main.o: main.cpp.o
 
@@ -240,15 +240,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... hw2"
+	@echo "... ATM.o"
+	@echo "... ATM.i"
+	@echo "... ATM.s"
 	@echo "... Account.o"
 	@echo "... Account.i"
 	@echo "... Account.s"
-	@echo "... Bank.o"
-	@echo "... Bank.i"
-	@echo "... Bank.s"
-	@echo "... Cashier.o"
-	@echo "... Cashier.i"
-	@echo "... Cashier.s"
+	@echo "... BankDB.o"
+	@echo "... BankDB.i"
+	@echo "... BankDB.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

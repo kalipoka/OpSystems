@@ -3,5 +3,5 @@ project(hw2)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp Account.h Account.cpp Bank.h Bank.cpp Cashier.h Cashier.cpp)
+set(SOURCE_FILES main.cpp Account.h Account.cpp BankDB.h BankDB.cpp ATM.h ATM.cpp)
 add_executable(hw2 ${SOURCE_FILES})

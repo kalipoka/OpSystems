@@ -105,68 +105,68 @@ CMakeFiles/hw2.dir/Account.cpp.o.provides: CMakeFiles/hw2.dir/Account.cpp.o.requ
 CMakeFiles/hw2.dir/Account.cpp.o.provides.build: CMakeFiles/hw2.dir/Account.cpp.o
 
 
-CMakeFiles/hw2.dir/Bank.cpp.o: CMakeFiles/hw2.dir/flags.make
-CMakeFiles/hw2.dir/Bank.cpp.o: ../Bank.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/hw2.dir/Bank.cpp.o"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hw2.dir/Bank.cpp.o -c /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Bank.cpp
+CMakeFiles/hw2.dir/BankDB.cpp.o: CMakeFiles/hw2.dir/flags.make
+CMakeFiles/hw2.dir/BankDB.cpp.o: ../BankDB.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/hw2.dir/BankDB.cpp.o"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hw2.dir/BankDB.cpp.o -c /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/BankDB.cpp
 
-CMakeFiles/hw2.dir/Bank.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hw2.dir/Bank.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Bank.cpp > CMakeFiles/hw2.dir/Bank.cpp.i
+CMakeFiles/hw2.dir/BankDB.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hw2.dir/BankDB.cpp.i"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/BankDB.cpp > CMakeFiles/hw2.dir/BankDB.cpp.i
 
-CMakeFiles/hw2.dir/Bank.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hw2.dir/Bank.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Bank.cpp -o CMakeFiles/hw2.dir/Bank.cpp.s
+CMakeFiles/hw2.dir/BankDB.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hw2.dir/BankDB.cpp.s"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/BankDB.cpp -o CMakeFiles/hw2.dir/BankDB.cpp.s
 
-CMakeFiles/hw2.dir/Bank.cpp.o.requires:
+CMakeFiles/hw2.dir/BankDB.cpp.o.requires:
 
-.PHONY : CMakeFiles/hw2.dir/Bank.cpp.o.requires
+.PHONY : CMakeFiles/hw2.dir/BankDB.cpp.o.requires
 
-CMakeFiles/hw2.dir/Bank.cpp.o.provides: CMakeFiles/hw2.dir/Bank.cpp.o.requires
-	$(MAKE) -f CMakeFiles/hw2.dir/build.make CMakeFiles/hw2.dir/Bank.cpp.o.provides.build
-.PHONY : CMakeFiles/hw2.dir/Bank.cpp.o.provides
+CMakeFiles/hw2.dir/BankDB.cpp.o.provides: CMakeFiles/hw2.dir/BankDB.cpp.o.requires
+	$(MAKE) -f CMakeFiles/hw2.dir/build.make CMakeFiles/hw2.dir/BankDB.cpp.o.provides.build
+.PHONY : CMakeFiles/hw2.dir/BankDB.cpp.o.provides
 
-CMakeFiles/hw2.dir/Bank.cpp.o.provides.build: CMakeFiles/hw2.dir/Bank.cpp.o
+CMakeFiles/hw2.dir/BankDB.cpp.o.provides.build: CMakeFiles/hw2.dir/BankDB.cpp.o
 
 
-CMakeFiles/hw2.dir/Cashier.cpp.o: CMakeFiles/hw2.dir/flags.make
-CMakeFiles/hw2.dir/Cashier.cpp.o: ../Cashier.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/hw2.dir/Cashier.cpp.o"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hw2.dir/Cashier.cpp.o -c /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Cashier.cpp
+CMakeFiles/hw2.dir/ATM.cpp.o: CMakeFiles/hw2.dir/flags.make
+CMakeFiles/hw2.dir/ATM.cpp.o: ../ATM.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/hw2.dir/ATM.cpp.o"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hw2.dir/ATM.cpp.o -c /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/ATM.cpp
 
-CMakeFiles/hw2.dir/Cashier.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hw2.dir/Cashier.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Cashier.cpp > CMakeFiles/hw2.dir/Cashier.cpp.i
+CMakeFiles/hw2.dir/ATM.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hw2.dir/ATM.cpp.i"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/ATM.cpp > CMakeFiles/hw2.dir/ATM.cpp.i
 
-CMakeFiles/hw2.dir/Cashier.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hw2.dir/Cashier.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Cashier.cpp -o CMakeFiles/hw2.dir/Cashier.cpp.s
+CMakeFiles/hw2.dir/ATM.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hw2.dir/ATM.cpp.s"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/ATM.cpp -o CMakeFiles/hw2.dir/ATM.cpp.s
 
-CMakeFiles/hw2.dir/Cashier.cpp.o.requires:
+CMakeFiles/hw2.dir/ATM.cpp.o.requires:
 
-.PHONY : CMakeFiles/hw2.dir/Cashier.cpp.o.requires
+.PHONY : CMakeFiles/hw2.dir/ATM.cpp.o.requires
 
-CMakeFiles/hw2.dir/Cashier.cpp.o.provides: CMakeFiles/hw2.dir/Cashier.cpp.o.requires
-	$(MAKE) -f CMakeFiles/hw2.dir/build.make CMakeFiles/hw2.dir/Cashier.cpp.o.provides.build
-.PHONY : CMakeFiles/hw2.dir/Cashier.cpp.o.provides
+CMakeFiles/hw2.dir/ATM.cpp.o.provides: CMakeFiles/hw2.dir/ATM.cpp.o.requires
+	$(MAKE) -f CMakeFiles/hw2.dir/build.make CMakeFiles/hw2.dir/ATM.cpp.o.provides.build
+.PHONY : CMakeFiles/hw2.dir/ATM.cpp.o.provides
 
-CMakeFiles/hw2.dir/Cashier.cpp.o.provides.build: CMakeFiles/hw2.dir/Cashier.cpp.o
+CMakeFiles/hw2.dir/ATM.cpp.o.provides.build: CMakeFiles/hw2.dir/ATM.cpp.o
 
 
 # Object files for target hw2
 hw2_OBJECTS = \
 "CMakeFiles/hw2.dir/main.cpp.o" \
 "CMakeFiles/hw2.dir/Account.cpp.o" \
-"CMakeFiles/hw2.dir/Bank.cpp.o" \
-"CMakeFiles/hw2.dir/Cashier.cpp.o"
+"CMakeFiles/hw2.dir/BankDB.cpp.o" \
+"CMakeFiles/hw2.dir/ATM.cpp.o"
 
 # External object files for target hw2
 hw2_EXTERNAL_OBJECTS =
 
 hw2.exe: CMakeFiles/hw2.dir/main.cpp.o
 hw2.exe: CMakeFiles/hw2.dir/Account.cpp.o
-hw2.exe: CMakeFiles/hw2.dir/Bank.cpp.o
-hw2.exe: CMakeFiles/hw2.dir/Cashier.cpp.o
+hw2.exe: CMakeFiles/hw2.dir/BankDB.cpp.o
+hw2.exe: CMakeFiles/hw2.dir/ATM.cpp.o
 hw2.exe: CMakeFiles/hw2.dir/build.make
 hw2.exe: CMakeFiles/hw2.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable hw2.exe"
@@ -179,8 +179,8 @@ CMakeFiles/hw2.dir/build: hw2.exe
 
 CMakeFiles/hw2.dir/requires: CMakeFiles/hw2.dir/main.cpp.o.requires
 CMakeFiles/hw2.dir/requires: CMakeFiles/hw2.dir/Account.cpp.o.requires
-CMakeFiles/hw2.dir/requires: CMakeFiles/hw2.dir/Bank.cpp.o.requires
-CMakeFiles/hw2.dir/requires: CMakeFiles/hw2.dir/Cashier.cpp.o.requires
+CMakeFiles/hw2.dir/requires: CMakeFiles/hw2.dir/BankDB.cpp.o.requires
+CMakeFiles/hw2.dir/requires: CMakeFiles/hw2.dir/ATM.cpp.o.requires
 
 .PHONY : CMakeFiles/hw2.dir/requires
 

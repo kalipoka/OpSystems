@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/ATM.cpp" "/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/cmake-build-debug/CMakeFiles/hw2.dir/ATM.cpp.o"
   "/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Account.cpp" "/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/cmake-build-debug/CMakeFiles/hw2.dir/Account.cpp.o"
-  "/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Bank.cpp" "/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/cmake-build-debug/CMakeFiles/hw2.dir/Bank.cpp.o"
-  "/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Cashier.cpp" "/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/cmake-build-debug/CMakeFiles/hw2.dir/Cashier.cpp.o"
+  "/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/BankDB.cpp" "/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/cmake-build-debug/CMakeFiles/hw2.dir/BankDB.cpp.o"
   "/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/main.cpp" "/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/cmake-build-debug/CMakeFiles/hw2.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
