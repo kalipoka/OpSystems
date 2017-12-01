@@ -5,21 +5,18 @@
 
 #include "BankDB.h"
 
-BankDB::BankDB(int numberOfATMs) {
+BankDB::BankDB() {
 
-
-    _numberOfATMs = numberOfATMs;
     _bankBalance = 0;
     _numberOfAccounts = 0;
 
     _accountsList = new std::list<Account>;
-    _cashiersList = new std::list<ATM>;
+
 
 }
 
 BankDB::~BankDB() {
     delete _accountsList;
-    delete _cashiersList;
 }
 
 

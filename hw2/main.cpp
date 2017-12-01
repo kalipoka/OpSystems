@@ -11,6 +11,7 @@
 
 using namespace std;
 
+/*
 int stringToInt(const string s) {
     istringstream istr(s);
     int i = 0;
@@ -39,7 +40,7 @@ int main() {
 
     std::cout << "Hello, World!, Welcome To the BANK BANG BANG" << std::endl;
 
-    BankDB Citi = BankDB(3);
+    static BankDB Citi = BankDB();
 
     const char* delims = " \t\n";
     vector<string> tokens;
@@ -222,4 +223,15 @@ if (inFile.is_open())
     return 0;
 }
 
+*/
 
+int main (int argc, char **argv){
+
+    BankDB Citi = BankDB();
+
+    ATM tryATM(1, &Citi);
+
+    tryATM.ReadCommandsFromFile("C:\\Users\\alexey\\Source\\Repos\\OpSystems\\hw2\\in1.txt");
+
+    return 0;
+}

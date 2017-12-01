@@ -9,6 +9,20 @@
 /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/ATM.cpp
 ATM.h
 /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/ATM.h
+iostream
+-
+Account.h
+/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Account.h
+BankDB.h
+/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/BankDB.h
+vector
+-
+string
+-
+sstream
+-
+fstream
+-
 
 /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/ATM.h
 thread
@@ -17,6 +31,10 @@ pthread.h
 -
 string
 -
+vector
+-
+BankDB.h
+/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/BankDB.h
 
 /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Account.cpp
 iostream

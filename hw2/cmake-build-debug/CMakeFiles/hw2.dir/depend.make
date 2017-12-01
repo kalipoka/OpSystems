@@ -3,6 +3,8 @@
 
 CMakeFiles/hw2.dir/ATM.cpp.o: ../ATM.cpp
 CMakeFiles/hw2.dir/ATM.cpp.o: ../ATM.h
+CMakeFiles/hw2.dir/ATM.cpp.o: ../Account.h
+CMakeFiles/hw2.dir/ATM.cpp.o: ../BankDB.h
 
 CMakeFiles/hw2.dir/Account.cpp.o: ../Account.cpp
 CMakeFiles/hw2.dir/Account.cpp.o: ../Account.h

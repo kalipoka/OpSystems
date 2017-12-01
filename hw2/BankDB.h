@@ -19,7 +19,7 @@ class BankDB {
 
 public:
 
-    BankDB(int numberOfATMs);
+    BankDB();
     ~BankDB();
 
     void AddAccount (Account newAccount);
@@ -28,17 +28,17 @@ public:
 
     void ChargeInterest();   //Should be as a thread
 
+
     void PrintAccounts();   // also should be as a thread?
 
 
 private:
 
     int _bankBalance;
-    int _numberOfATMs;
     int _numberOfAccounts;
 
     std::list<Account>* _accountsList;
-    std::list<ATM>* _cashiersList;
+
 };
 
 
