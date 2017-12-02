@@ -204,6 +204,33 @@ BankDB.cpp.s:
 	$(MAKE) -f CMakeFiles/hw2.dir/build.make CMakeFiles/hw2.dir/BankDB.cpp.s
 .PHONY : BankDB.cpp.s
 
+Threads.o: Threads.cpp.o
+
+.PHONY : Threads.o
+
+# target to build an object file
+Threads.cpp.o:
+	$(MAKE) -f CMakeFiles/hw2.dir/build.make CMakeFiles/hw2.dir/Threads.cpp.o
+.PHONY : Threads.cpp.o
+
+Threads.i: Threads.cpp.i
+
+.PHONY : Threads.i
+
+# target to preprocess a source file
+Threads.cpp.i:
+	$(MAKE) -f CMakeFiles/hw2.dir/build.make CMakeFiles/hw2.dir/Threads.cpp.i
+.PHONY : Threads.cpp.i
+
+Threads.s: Threads.cpp.s
+
+.PHONY : Threads.s
+
+# target to generate assembly for a file
+Threads.cpp.s:
+	$(MAKE) -f CMakeFiles/hw2.dir/build.make CMakeFiles/hw2.dir/Threads.cpp.s
+.PHONY : Threads.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -249,6 +276,9 @@ help:
 	@echo "... BankDB.o"
 	@echo "... BankDB.i"
 	@echo "... BankDB.s"
+	@echo "... Threads.o"
+	@echo "... Threads.i"
+	@echo "... Threads.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

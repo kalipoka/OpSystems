@@ -1,1 +1,1 @@
-/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/hw2.dir/main.cpp.o CMakeFiles/hw2.dir/Account.cpp.o CMakeFiles/hw2.dir/BankDB.cpp.o CMakeFiles/hw2.dir/ATM.cpp.o  -o hw2.exe -Wl,--out-implib,libhw2.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/hw2.dir/main.cpp.o CMakeFiles/hw2.dir/Account.cpp.o CMakeFiles/hw2.dir/BankDB.cpp.o CMakeFiles/hw2.dir/ATM.cpp.o CMakeFiles/hw2.dir/Threads.cpp.o  -o hw2.exe -Wl,--out-implib,libhw2.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

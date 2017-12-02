@@ -52,7 +52,8 @@ ATM::~ATM() {
 void ATM::ReadCommandsFromFile(string path) {
     if (DEBUG) std::cout << "Got Into Read Commands From File" << std::endl;
     string line;
-    std::ifstream inFile (path,std::ifstream::in);
+    //std::ifstream inFile (path,std::ifstream::in);
+    ifstream inFile(path.c_str());
 
     if (!inFile.is_open())
     {
@@ -70,8 +71,8 @@ void ATM::ReadCommandsFromFile(string path) {
 }
 
 void ATM::ExecuteCommand(string command) {
-    if (DEBUG) std::cout << "Got Into Execute Commands" << std::endl;
 
+    if (DEBUG) std::cout << "Got Into Execute Commands" << std::endl;
 
     const char* delims = " \t\n";
     vector<string> tokens;
@@ -82,6 +83,7 @@ void ATM::ExecuteCommand(string command) {
     if (tokens.size() == 0) {
         std::cout << "Empty Command" << std::endl;
     }
+
     // Open Account
     if (tokens[0] == "O") {
         //Create Account - asuming legal input

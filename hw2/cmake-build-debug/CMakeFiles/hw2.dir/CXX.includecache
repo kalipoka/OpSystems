@@ -66,19 +66,21 @@ Account.h
 ATM.h
 /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/ATM.h
 
+/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Threads.cpp
+Threads.h
+/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Threads.h
+
+/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Threads.h
+BankDB.h
+/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/BankDB.h
+
 /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/main.cpp
 iostream
 -
-Account.h
-/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Account.h
+pthread.h
+-
 BankDB.h
 /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/BankDB.h
-vector
--
-string
--
-sstream
--
-fstream
--
+Threads.h
+/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Threads.h
 

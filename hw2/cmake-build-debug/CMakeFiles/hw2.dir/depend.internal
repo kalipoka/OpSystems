@@ -14,8 +14,15 @@ CMakeFiles/hw2.dir/BankDB.cpp.o
  /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Account.h
  /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/BankDB.cpp
  /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/BankDB.h
+CMakeFiles/hw2.dir/Threads.cpp.o
+ /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/ATM.h
+ /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Account.h
+ /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/BankDB.h
+ /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Threads.cpp
+ /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Threads.h
 CMakeFiles/hw2.dir/main.cpp.o
  /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/ATM.h
  /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Account.h
  /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/BankDB.h
+ /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Threads.h
  /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/main.cpp

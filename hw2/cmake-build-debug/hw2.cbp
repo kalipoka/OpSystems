@@ -98,6 +98,12 @@
 		<Unit filename="/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/BankDB.h">
 			<Option target="hw2"/>
 		</Unit>
+		<Unit filename="/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Threads.cpp">
+			<Option target="hw2"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Threads.h">
+			<Option target="hw2"/>
+		</Unit>
 		<Unit filename="/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/main.cpp">
 			<Option target="hw2"/>
 		</Unit>
