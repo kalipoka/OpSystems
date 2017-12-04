@@ -34,16 +34,18 @@ int main (int argc, char **argv){
     // here we try before threads
     // create one atms with access to the data
 
-    BankDB Citi = BankDB();
+    BankDB Citi;// = BankDB();
     ATM tryATM(1, &Citi);
     tryATM.ReadCommandsFromFile("C:\\Users\\alexey\\Source\\Repos\\OpSystems\\hw2\\in1.txt");
 
     // here I will try to create a printing thread
 
-    //pthread_t print_status;
+    pthread_t print_status;
+    pthread_create(&print_status,NULL, &thread_bank_print,(void *) &Citi );
 
-    //pthread_create(&print_status,NULL, &thread_bank_print,(void *) &Citi );
-
-    Citi.PrintAccounts();
+    if (pthread_join(print_status,NULL)){
+        perror("Join Fail");
+        exit(1);
+    }
     return 0;
 }

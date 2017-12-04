@@ -30,21 +30,19 @@ void *thread_bank_print(void* args) {
 
     std::cout << "Entered Print Thread" << std::endl;
 
-   BankDB *temp = (BankDB *) args;
+   BankDB* temp = static_cast<BankDB *>(args) ;
+
 /*
     if (temp->_numberOfAccounts > 1)  // sort only if more than 1 element
         temp->_accountsList->sort(CompareFunction);
-
     //here need to lock
     for (auto i  =temp->_accountsList->begin(); i !=temp->_accountsList->end(); ++i){
-
         std::cout << i->GetAccountNumber() << "\t" << i->GetPassword() << "\t" << i->CheckBalance()  << "\t" << i->CheckIsVIP()  << std::endl;
     }
-
     if(DEBUG) std::cout << "Finished Printing with thread" << std::endl;
     //here need to unlock;
-
 */
+
     temp->PrintAccounts();
     pthread_exit(NULL);
 }

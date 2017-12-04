@@ -16,7 +16,7 @@ BankDB::BankDB() {
 }
 
 BankDB::~BankDB() {
-    delete _accountsList;
+    //delete _accountsList;
 }
 
 

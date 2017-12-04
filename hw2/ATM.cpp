@@ -213,15 +213,15 @@ void ATM::ExecuteCommand(string command) {
                 // need to open / insert threads here
                 if (tempAccount->CheckBalance() < stringToInt(tokens[4]) )
                 {
-                    std::cout << "Error " << this->_serialNumber <<": Your transaction failed – account id "<< tokens[1] << " balance is lower than  "<< tokens[4]<<std::endl;
+                    std::cout << "Error " << this->_serialNumber <<": Your transaction failed – account id "<< tokens[1] << " balance is lower than "<< tokens[4]<<std::endl;
                 } else{
                     if(DEBUG)  std::cout << "Making Transaction and printing BEFORE" << std::endl;
-                    _BankDB->PrintAccounts();
+                    if(DEBUG) _BankDB->PrintAccounts();
                     tempAccount->Withdrawal(stringToInt(tokens[4]));
                     accountToTransasct->Deposit(stringToInt(tokens[4]));
                     std::cout <<""<< this->_serialNumber <<": Transfer "  << tokens[4] << " from account " << tokens[1] << " to account " << tokens[3] << "new account balance is " << tempAccount->CheckBalance() << " new target account balance is " << accountToTransasct->CheckBalance() << std::endl;
                     if(DEBUG)  std::cout << "Making Transaction and printing AFTER" << std::endl;
-                    _BankDB->PrintAccounts();
+                    if(DEBUG) _BankDB->PrintAccounts();
                 }
                 // need to close thread here??
             }
