@@ -22,6 +22,9 @@ BankDB::~BankDB() {
 
 bool CompareFunction (Account Acc1,Account Acc2 ) { return (Acc1.GetAccountNumber() <Acc2.GetAccountNumber()); }
 
+int BankDB::GetBankBalance(){
+    return _bankBalance;
+}
 
 void BankDB::AddAccount(Account newAccount, int ATM_num) {
 
@@ -39,8 +42,6 @@ void BankDB::AddAccount(Account newAccount, int ATM_num) {
 
 void BankDB::PrintAccounts() {
 
- //   std::list<Account>* TempAccList = _accountsList;
-
 // sorting the list before printing according to the account number
 
     if (_numberOfAccounts > 1)  // sort only if more than 1 element
@@ -55,7 +56,7 @@ void BankDB::PrintAccounts() {
 
     for (auto i  = _accountsList->begin(); i !=_accountsList->end(); ++i){
 
-        std::cout << i->GetAccountNumber() << "\t" << i->GetPassword() << "\t" << i->CheckBalance()  << "\t" << i->CheckIsVIP()  << std::endl;
+        std::cout <<"Account " << i->GetAccountNumber() << ": Balance - " << i->CheckBalance() << " $ , Account Password - " << i->GetPassword()  << std::endl;
     }
 
 }

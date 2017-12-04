@@ -28,15 +28,16 @@ public:
 
 
     void PrintAccounts();   // also should be as a thread?
+    int GetBankBalance();
 
-    int _bankBalance;
-    int _numberOfAccounts;
 
-    std::list<Account>* _accountsList;
+
 
 private:
 
-
+    int _bankBalance;
+    int _numberOfAccounts;
+    std::list<Account>* _accountsList;
 };
 
 bool CompareFunction (Account Acc1,Account Acc2 );
