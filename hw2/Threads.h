@@ -17,4 +17,8 @@ struct thread_data_atm {
 
 void *thread_atm (void *arguments);
 
+void *thread_bank_print(void* args);
+
+//
+
 #endif //HW2_THREADS_H

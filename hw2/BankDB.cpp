@@ -23,10 +23,18 @@ BankDB::~BankDB() {
 bool CompareFunction (Account Acc1,Account Acc2 ) { return (Acc1.GetAccountNumber() <Acc2.GetAccountNumber()); }
 
 
-void BankDB::AddAccount(Account newAccount) {
+void BankDB::AddAccount(Account newAccount, int ATM_num) {
 
-    _accountsList->push_front(newAccount);
-    _numberOfAccounts++;
+    Account* temp = this->FindAccountByNumber(newAccount.GetAccountNumber());
+    if (temp == NULL) // we do not have acconts like this
+    {
+        _accountsList->push_front(newAccount);
+        _numberOfAccounts++;
+        std::cout << ATM_num << ": New account id is "<< newAccount.GetAccountNumber()<<" with password "<< newAccount.GetPassword()<< " and initial balance "<< newAccount.CheckBalance() << std::endl;
+    } else{
+        std::cout << "Error " << ATM_num << ": Your transaction failed – account with the same id exists"<< std::endl;
+    }
+
 }
 
 void BankDB::PrintAccounts() {

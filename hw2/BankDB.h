@@ -13,8 +13,6 @@
 #include "Account.h"
 #include "ATM.h"
 
-#define DEBUG 1
-
 class BankDB {
 
 public:
@@ -22,7 +20,7 @@ public:
     BankDB();
     ~BankDB();
 
-    void AddAccount (Account newAccount);
+    void AddAccount (Account newAccount, int ATM_num);
 
     Account* FindAccountByNumber(int accountNumber );
 
@@ -31,15 +29,17 @@ public:
 
     void PrintAccounts();   // also should be as a thread?
 
-
-private:
-
     int _bankBalance;
     int _numberOfAccounts;
 
     std::list<Account>* _accountsList;
 
+private:
+
+
 };
+
+bool CompareFunction (Account Acc1,Account Acc2 );
 
 
 #endif //HW2_BANK_H

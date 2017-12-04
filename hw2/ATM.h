@@ -11,7 +11,7 @@
 #include <vector>
 #include "BankDB.h"
 
-#define DEBUG 1
+
 
 using namespace std;
 class BankDB;
