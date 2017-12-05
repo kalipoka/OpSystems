@@ -1,0 +1,1 @@
+1: New account id is 2002 with password 1212 and initial balance 301: New account id is 1001 with password 1234 and initial balance 5001: New account id is 1050 with password 1234 and initial balance 700

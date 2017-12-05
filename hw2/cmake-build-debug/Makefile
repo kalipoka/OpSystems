@@ -231,6 +231,33 @@ Threads.cpp.s:
 	$(MAKE) -f CMakeFiles/hw2.dir/build.make CMakeFiles/hw2.dir/Threads.cpp.s
 .PHONY : Threads.cpp.s
 
+WriteToLog.o: WriteToLog.cpp.o
+
+.PHONY : WriteToLog.o
+
+# target to build an object file
+WriteToLog.cpp.o:
+	$(MAKE) -f CMakeFiles/hw2.dir/build.make CMakeFiles/hw2.dir/WriteToLog.cpp.o
+.PHONY : WriteToLog.cpp.o
+
+WriteToLog.i: WriteToLog.cpp.i
+
+.PHONY : WriteToLog.i
+
+# target to preprocess a source file
+WriteToLog.cpp.i:
+	$(MAKE) -f CMakeFiles/hw2.dir/build.make CMakeFiles/hw2.dir/WriteToLog.cpp.i
+.PHONY : WriteToLog.cpp.i
+
+WriteToLog.s: WriteToLog.cpp.s
+
+.PHONY : WriteToLog.s
+
+# target to generate assembly for a file
+WriteToLog.cpp.s:
+	$(MAKE) -f CMakeFiles/hw2.dir/build.make CMakeFiles/hw2.dir/WriteToLog.cpp.s
+.PHONY : WriteToLog.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -279,6 +306,9 @@ help:
 	@echo "... Threads.o"
 	@echo "... Threads.i"
 	@echo "... Threads.s"
+	@echo "... WriteToLog.o"
+	@echo "... WriteToLog.i"
+	@echo "... WriteToLog.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

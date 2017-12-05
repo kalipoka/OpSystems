@@ -9,10 +9,7 @@ BankDB::BankDB() {
 
     _bankBalance = 0;
     _numberOfAccounts = 0;
-
     _accountsList = new std::list<Account>;
-
-
 }
 
 BankDB::~BankDB() {
@@ -27,15 +24,20 @@ int BankDB::GetBankBalance(){
 }
 
 void BankDB::AddAccount(Account newAccount, int ATM_num) {
-
+    std::stringstream ss;
     Account* temp = this->FindAccountByNumber(newAccount.GetAccountNumber());
     if (temp == NULL) // we do not have acconts like this
     {
         _accountsList->push_front(newAccount);
         _numberOfAccounts++;
-        std::cout << ATM_num << ": New account id is "<< newAccount.GetAccountNumber()<<" with password "<< newAccount.GetPassword()<< " and initial balance "<< newAccount.CheckBalance() << std::endl;
+        if (DEBUG) std::cout << ATM_num << ": New account id is "<< newAccount.GetAccountNumber()<<" with password "<< newAccount.GetPassword()<< " and initial balance "<< newAccount.CheckBalance() << std::endl;
+
+        ss << ATM_num << ": New account id is "<< newAccount.GetAccountNumber()<<" with password "<< newAccount.GetPassword()<< " and initial balance "<< newAccount.CheckBalance()<<'\n';
+        logF.WriteLogLine(ss.str());
     } else{
-        std::cout << "Error " << ATM_num << ": Your transaction failed – account with the same id exists"<< std::endl;
+        if (DEBUG) std::cout << "Error " << ATM_num << ": Your transaction failed – account with the same id exists"<< std::endl;
+        ss << "Error " << ATM_num << ": Your transaction failed – account with the same id exists\n";
+        logF.WriteLogLine(ss.str());
     }
 
 }

@@ -4,7 +4,7 @@
 #ifndef HW2_BANK_H
 #define HW2_BANK_H
 
-
+#include <sstream>
 #include <iostream>
 #include <list>
 #include <string>
@@ -12,6 +12,9 @@
 #include <algorithm>
 #include "Account.h"
 #include "ATM.h"
+#include "WriteToLog.h"
+
+extern WriteToLog logF;
 
 class BankDB {
 

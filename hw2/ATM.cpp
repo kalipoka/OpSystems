@@ -12,6 +12,7 @@
 #include <sstream>
 #include <fstream>
 
+#include "WriteToLog.h"
 
 using namespace std;
 
@@ -78,7 +79,7 @@ void ATM::ExecuteCommand(string command) {
     vector<string> tokens;
     string line;
     tokens = tokenize(command, delims);
-
+    std::stringstream ss;
 
     if (tokens.size() == 0) {
         std::cout << "Empty Command" << std::endl;
@@ -112,14 +113,16 @@ void ATM::ExecuteCommand(string command) {
             }
                 // password incorrect
             else {
-                std::cout << "Error " << this->_serialNumber << ": Your transaction failed – password for account id "<< tokens[1] <<" is incorrect" << std::endl;
+                if (DEBUG) std::cout << "Error " << this->_serialNumber << ": Your transaction failed – password for account id "<< tokens[1] <<" is incorrect" << std::endl;
+                ss << "Error " << this->_serialNumber << ": Your transaction failed – password for account id "<< tokens[1] <<" is incorrect\n";
             }
 
         }
             // Account number not found
         else
         {
-            std::cout << "Error " << this->_serialNumber <<": Your transaction failed – account id "<< tokens[1] <<" does not exist" << std::endl;
+            if (DEBUG)std::cout << "Error " << this->_serialNumber <<": Your transaction failed – account id "<< tokens[1] <<" does not exist" << std::endl;
+            ss << "Error " << this->_serialNumber <<": Your transaction failed – account id "<< tokens[1] <<" does not exist\n";
         }
     }
 
@@ -134,17 +137,17 @@ void ATM::ExecuteCommand(string command) {
                 if (DEBUG) _BankDB->PrintAccounts();
                 tempAccount->Deposit(stringToInt(tokens[3]));
                 int balance = tempAccount->CheckBalance();
-                std::cout <<"k"<<  this->_serialNumber <<": Account "<< tokens[1] <<" new balance is " << balance << " after " << tokens[3]
-                          << " $ was deposited" << std::endl;
-                std::cout << this->_serialNumber <<": Account "<< tokens[1] <<" new balance is "<< tempAccount->CheckBalance() << " after " <<  tokens[3] <<" $ was deposited" << std::endl;
-                std::cout << _serialNumber <<": Account " << tokens[1] << " new balance is " << balance << " after " << tokens[3] << " was deposited" <<std::endl;
+                if (DEBUG) std::cout << this->_serialNumber <<": Account "<< tokens[1] <<" new balance is "<< tempAccount->CheckBalance() << " after " <<  tokens[3] <<" $ was deposited" << std::endl;
+                ss << this->_serialNumber <<": Account "<< tokens[1] <<" new balance is "<< tempAccount->CheckBalance() << " after " <<  tokens[3] <<" $ was deposited\n";
                 if (DEBUG) std::cout << "Adding Diposit  and printing AFTER" << std::endl;
                 if (DEBUG) _BankDB->PrintAccounts();
             } else {
-                std::cout << "Error " << this->_serialNumber << ": Your transaction failed – password for account id "<< tokens[1] <<" is incorrect" << std::endl;  // wrong password
+                if (DEBUG)std::cout << "Error " << this->_serialNumber << ": Your transaction failed – password for account id "<< tokens[1] <<" is incorrect" << std::endl;  // wrong password
+                ss << "Error " << this->_serialNumber << ": Your transaction failed – password for account id "<< tokens[1] <<" is incorrect\n";
             }
         } else{   // Account not found
-            std::cout << "Error " << this->_serialNumber <<": Your transaction failed – account id "<< tokens[1] <<" does not exist" << std::endl;
+            if (DEBUG)std::cout << "Error " << this->_serialNumber <<": Your transaction failed – account id "<< tokens[1] <<" does not exist" << std::endl;
+            ss << "Error " << this->_serialNumber <<": Your transaction failed – account id "<< tokens[1] <<" does not exist\n";
         }
     }
 
@@ -160,18 +163,22 @@ void ATM::ExecuteCommand(string command) {
 
                 if(!tempAccount->Withdrawal(stringToInt(tokens[3]))) // if return value is 0 - we succeded
                 {
-                    std::cout << this->_serialNumber<< ": Account " << tempAccount->GetAccountNumber() << " new balance is "<< tempAccount->CheckBalance() <<" after " << tokens[3] <<" $ was withdrew"  << std::endl;   //succes
+                    if (DEBUG) std::cout << this->_serialNumber<< ": Account " << tempAccount->GetAccountNumber() << " new balance is "<< tempAccount->CheckBalance() <<" after " << tokens[3] <<" $ was withdrew"  << std::endl;   //succes
+                    ss << this->_serialNumber<< ": Account " << tempAccount->GetAccountNumber() << " new balance is "<< tempAccount->CheckBalance() <<" after " << tokens[3] <<" $ was withdrew"  << std::endl;
                     if (DEBUG) std::cout << "Making withdrawal  and printing AFTER" << std::endl;
                     if (DEBUG) _BankDB->PrintAccounts();
                 } else{
-                    std::cout << "Error " << this->_serialNumber <<": Your transaction failed – account id " << tempAccount->GetAccountNumber() <<" balance is lower than " <<  tokens[3] << std::endl;
+                    if (DEBUG) std::cout << "Error " << this->_serialNumber <<": Your transaction failed – account id " << tempAccount->GetAccountNumber() <<" balance is lower than " <<  tokens[3] << std::endl;
+                    ss << "Error " << this->_serialNumber <<": Your transaction failed – account id " << tempAccount->GetAccountNumber() <<" balance is lower than " <<  tokens[3] <<'\n';
                 }
 
             } else {   // wrong password
-                std::cout << "Error " << this->_serialNumber << ": Your transaction failed – password for account id "<< tokens[1] <<" is incorrect" << std::endl;
+                if (DEBUG)std::cout << "Error " << this->_serialNumber << ": Your transaction failed – password for account id "<< tokens[1] <<" is incorrect" << std::endl;
+                ss << "Error " << this->_serialNumber << ": Your transaction failed – password for account id "<< tokens[1] <<" is incorrect\n";
             }
         } else{
-            std::cout << "Error " << this->_serialNumber <<": Your transaction failed – account id "<< tokens[1] <<" does not exist" << std::endl;
+            if (DEBUG)std::cout << "Error " << this->_serialNumber <<": Your transaction failed – account id "<< tokens[1] <<" does not exist" << std::endl;
+            ss << "Error " << this->_serialNumber <<": Your transaction failed – account id "<< tokens[1] <<" does not exist\n";
         }
     }
 
@@ -186,16 +193,19 @@ void ATM::ExecuteCommand(string command) {
                 // need to open / insert threads here
                 int currentBalance = tempAccount->CheckBalance();
                 // need to close thread here
-                std::cout << this->_serialNumber << ": Account " << tokens[1] << " balace is " << currentBalance <<std::endl;
+                if (DEBUG)std::cout << this->_serialNumber << ": Account " << tokens[1] << " balance is " << currentBalance <<std::endl;
+                ss << this->_serialNumber << ": Account " << tokens[1] << " balance is " << currentBalance <<'\n';
             }
 
             else { // password incorrect
-                std::cout << "Error " << this->_serialNumber << ": Your transaction failed – password for account id "<< tokens[1] <<" is incorrect" << std::endl;
+                if (DEBUG)std::cout << "Error " << this->_serialNumber << ": Your transaction failed – password for account id "<< tokens[1] <<" is incorrect" << std::endl;
+                ss << "Error " << this->_serialNumber << ": Your transaction failed – password for account id "<< tokens[1] <<" is incorrect\n";
             }
         }
         else   // Account number not found
         {
-            std::cout << "Error " << this->_serialNumber <<": Your transaction failed – account id "<< tokens[1] <<" does not exist" << std::endl;
+            if (DEBUG)std::cout << "Error " << this->_serialNumber <<": Your transaction failed – account id "<< tokens[1] <<" does not exist" << std::endl;
+            ss << "Error " << this->_serialNumber <<": Your transaction failed – account id "<< tokens[1] <<" does not exist\n";
         }
     }
 
@@ -213,13 +223,15 @@ void ATM::ExecuteCommand(string command) {
                 // need to open / insert threads here
                 if (tempAccount->CheckBalance() < stringToInt(tokens[4]) )
                 {
-                    std::cout << "Error " << this->_serialNumber <<": Your transaction failed – account id "<< tokens[1] << " balance is lower than "<< tokens[4]<<std::endl;
+                    if (DEBUG) std::cout << "Error " << this->_serialNumber <<": Your transaction failed – account id "<< tokens[1] << " balance is lower than "<< tokens[4]<<std::endl;
+                    ss << "Error " << this->_serialNumber <<": Your transaction failed – account id "<< tokens[1] << " balance is lower than "<< tokens[4] <<'\n';
                 } else{
                     if(DEBUG)  std::cout << "Making Transaction and printing BEFORE" << std::endl;
                     if(DEBUG) _BankDB->PrintAccounts();
                     tempAccount->Withdrawal(stringToInt(tokens[4]));
                     accountToTransasct->Deposit(stringToInt(tokens[4]));
-                    std::cout <<""<< this->_serialNumber <<": Transfer "  << tokens[4] << " from account " << tokens[1] << " to account " << tokens[3] << "new account balance is " << tempAccount->CheckBalance() << " new target account balance is " << accountToTransasct->CheckBalance() << std::endl;
+                    if (DEBUG) std::cout <<""<< this->_serialNumber <<": Transfer "  << tokens[4] << " from account " << tokens[1] << " to account " << tokens[3] << " new account balance is " << tempAccount->CheckBalance() << " new target account balance is " << accountToTransasct->CheckBalance() << std::endl;
+                    ss << this->_serialNumber <<": Transfer "  << tokens[4] << " from account " << tokens[1] << " to account " << tokens[3] << " new account balance is " << tempAccount->CheckBalance() << " new target account balance is " << accountToTransasct->CheckBalance() <<'\n';
                     if(DEBUG)  std::cout << "Making Transaction and printing AFTER" << std::endl;
                     if(DEBUG) _BankDB->PrintAccounts();
                 }
@@ -227,13 +239,17 @@ void ATM::ExecuteCommand(string command) {
             }
 
             else { // password incorrect
-                std::cout << "Error " << this->_serialNumber << ": Your transaction failed – password for account id "<< tokens[1] <<" is incorrect" << std::endl;
+                if (DEBUG)std::cout << "Error " << this->_serialNumber << ": Your transaction failed – password for account id "<< tokens[1] <<" is incorrect" << std::endl;
+                ss << "Error " << this->_serialNumber << ": Your transaction failed – password for account id "<< tokens[1] <<" is incorrect\n";
             }
         }
         else   // Account number not found
         {
-            std::cout << "Error " << this->_serialNumber <<": Your transaction failed – account id "<< tokens[1] <<" does not exist" << std::endl;
+            if (DEBUG)std::cout << "Error " << this->_serialNumber <<": Your transaction failed – account id "<< tokens[1] <<" does not exist" << std::endl;
+            ss << "Error " << this->_serialNumber <<": Your transaction failed – account id "<< tokens[1] <<" does not exist\n";
         }
     }
+    //write the message to logfile
+    logF.WriteLogLine(ss.str());
 
 }

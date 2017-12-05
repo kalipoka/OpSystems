@@ -23,6 +23,8 @@ sstream
 -
 fstream
 -
+WriteToLog.h
+/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/WriteToLog.h
 
 /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/ATM.h
 thread
@@ -51,6 +53,8 @@ BankDB.h
 /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/BankDB.h
 
 /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/BankDB.h
+sstream
+-
 iostream
 -
 list
@@ -65,6 +69,8 @@ Account.h
 /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Account.h
 ATM.h
 /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/ATM.h
+WriteToLog.h
+/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/WriteToLog.h
 
 /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Threads.cpp
 Threads.h
@@ -73,6 +79,30 @@ Threads.h
 /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Threads.h
 BankDB.h
 /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/BankDB.h
+
+/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/WriteToLog.cpp
+pthread.h
+-
+string
+-
+iostream
+-
+fstream
+-
+WriteToLog.h
+/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/WriteToLog.h
+Account.h
+/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Account.h
+
+/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/WriteToLog.h
+iostream
+-
+fstream
+-
+pthread.h
+-
+string
+-
 
 /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/main.cpp
 iostream
@@ -83,4 +113,6 @@ BankDB.h
 /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/BankDB.h
 Threads.h
 /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Threads.h
+WriteToLog.h
+/cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/WriteToLog.h
 

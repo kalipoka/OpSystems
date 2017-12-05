@@ -2,9 +2,12 @@
 #include <pthread.h>
 #include "BankDB.h"
 #include "Threads.h"
+#include "WriteToLog.h"
 
 
 using namespace std;
+
+WriteToLog logF;
 
 int main (int argc, char **argv){
 
@@ -14,25 +17,27 @@ int main (int argc, char **argv){
 
     // creating the data set - it will be used and acceced by all the ATMS and by the bnk itself
 
-    BankDB Citi;
 
-    thread_data_atm atm_args;
+       BankDB Citi;
 
-    // initialize arguments
-    string path ="C:\\Users\\alexey\\Source\\Repos\\OpSystems\\hw2\\in1.txt";
+       thread_data_atm atm_args;
 
-    atm_args.atm_id = 1;
-    atm_args.pathToInstructions = path;
-    atm_args.DB = &Citi;
+       // initialize arguments
+       string path ="C:\\Users\\alexey\\Source\\Repos\\OpSystems\\hw2\\in1.txt";
 
-    pthread_t my_thread;
-    pthread_create(&my_thread,NULL, &thread_atm,(void *) &atm_args );
+       atm_args.atm_id = 1;
+       atm_args.pathToInstructions = path;
+       atm_args.DB = &Citi;
+
+     pthread_t my_thread;
+       pthread_create(&my_thread,NULL, &thread_atm,(void *) &atm_args );
 
 
     // here we try before threads
     // create one atms with access to the data
 
-/*   // This is the version without concurrency
+   // This is the version without concurrency
+    /*
     BankDB Citi;// = BankDB();
     ATM tryATM(1, &Citi);
     tryATM.ReadCommandsFromFile("C:\\Users\\alexey\\Source\\Repos\\OpSystems\\hw2\\in1.txt");
@@ -56,6 +61,7 @@ int main (int argc, char **argv){
         perror("Join Printing Fail");
         exit(1);
     }
+
 
     return 0;
 }

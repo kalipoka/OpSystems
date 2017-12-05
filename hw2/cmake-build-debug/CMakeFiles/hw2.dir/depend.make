@@ -5,6 +5,7 @@ CMakeFiles/hw2.dir/ATM.cpp.o: ../ATM.cpp
 CMakeFiles/hw2.dir/ATM.cpp.o: ../ATM.h
 CMakeFiles/hw2.dir/ATM.cpp.o: ../Account.h
 CMakeFiles/hw2.dir/ATM.cpp.o: ../BankDB.h
+CMakeFiles/hw2.dir/ATM.cpp.o: ../WriteToLog.h
 
 CMakeFiles/hw2.dir/Account.cpp.o: ../Account.cpp
 CMakeFiles/hw2.dir/Account.cpp.o: ../Account.h
@@ -13,16 +14,23 @@ CMakeFiles/hw2.dir/BankDB.cpp.o: ../ATM.h
 CMakeFiles/hw2.dir/BankDB.cpp.o: ../Account.h
 CMakeFiles/hw2.dir/BankDB.cpp.o: ../BankDB.cpp
 CMakeFiles/hw2.dir/BankDB.cpp.o: ../BankDB.h
+CMakeFiles/hw2.dir/BankDB.cpp.o: ../WriteToLog.h
 
 CMakeFiles/hw2.dir/Threads.cpp.o: ../ATM.h
 CMakeFiles/hw2.dir/Threads.cpp.o: ../Account.h
 CMakeFiles/hw2.dir/Threads.cpp.o: ../BankDB.h
 CMakeFiles/hw2.dir/Threads.cpp.o: ../Threads.cpp
 CMakeFiles/hw2.dir/Threads.cpp.o: ../Threads.h
+CMakeFiles/hw2.dir/Threads.cpp.o: ../WriteToLog.h
+
+CMakeFiles/hw2.dir/WriteToLog.cpp.o: ../Account.h
+CMakeFiles/hw2.dir/WriteToLog.cpp.o: ../WriteToLog.cpp
+CMakeFiles/hw2.dir/WriteToLog.cpp.o: ../WriteToLog.h
 
 CMakeFiles/hw2.dir/main.cpp.o: ../ATM.h
 CMakeFiles/hw2.dir/main.cpp.o: ../Account.h
 CMakeFiles/hw2.dir/main.cpp.o: ../BankDB.h
 CMakeFiles/hw2.dir/main.cpp.o: ../Threads.h
+CMakeFiles/hw2.dir/main.cpp.o: ../WriteToLog.h
 CMakeFiles/hw2.dir/main.cpp.o: ../main.cpp
 
