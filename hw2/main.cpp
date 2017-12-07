@@ -15,9 +15,16 @@ int main (int argc, char **argv){
     // we then need to create the threads and initialize all the ATMS with the needed data
 
 
-    // creating the data set - it will be used and acceced by all the ATMS and by the bnk itself
 
 
+    // This is the version without concurrency
+    BankDB Citi;// = BankDB();
+    ATM tryATM(1, &Citi);
+    tryATM.ReadCommandsFromFile("C:\\Users\\alexey\\Source\\Repos\\OpSystems\\hw2\\in1.txt");
+    Citi.PrintAccounts();
+    Citi.ChargeFee();
+
+/*
        BankDB Citi;
 
        thread_data_atm atm_args;
@@ -31,17 +38,6 @@ int main (int argc, char **argv){
 
      pthread_t my_thread;
        pthread_create(&my_thread,NULL, &thread_atm,(void *) &atm_args );
-
-
-    // here we try before threads
-    // create one atms with access to the data
-
-   // This is the version without concurrency
-    /*
-    BankDB Citi;// = BankDB();
-    ATM tryATM(1, &Citi);
-    tryATM.ReadCommandsFromFile("C:\\Users\\alexey\\Source\\Repos\\OpSystems\\hw2\\in1.txt");
-*/
 
 
     // here we make a printing thread - works (without locking yet)
@@ -61,7 +57,6 @@ int main (int argc, char **argv){
         perror("Join Printing Fail");
         exit(1);
     }
-
-
+*/
     return 0;
 }

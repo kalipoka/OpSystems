@@ -23,6 +23,7 @@ public:
     void BecomeVip();
     void Deposit(int );
     int Withdrawal(int );   // 0 if succescul   1 if not enough money
+    int GiveInterest (double percent);
 
 private:
     int _accountNumber;

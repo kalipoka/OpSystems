@@ -41,6 +41,8 @@ BankDB.h
 /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Account.cpp
 iostream
 -
+math.h
+-
 Account.h
 /cygdrive/c/Users/alexey/Source/Repos/OpSystems/hw2/Account.h
 

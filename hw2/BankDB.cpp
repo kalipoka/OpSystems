@@ -49,13 +49,6 @@ void BankDB::PrintAccounts() {
     if (_numberOfAccounts > 1)  // sort only if more than 1 element
         _accountsList->sort(CompareFunction);
 
-    //std::sort(TempAccList->begin(),TempAccList->end(),CompareFunction);
-    /*
-    for (auto i  = TempAccList->begin(); i !=TempAccList->end(); ++i){
-
-        std::cout << i->GetAccountNumber() << "\t" << i->GetPassword() << "\t" << i->CheckBalance()  << "\t" << i->CheckIsVIP()  << std::endl;
-    } */
-
     for (auto i  = _accountsList->begin(); i !=_accountsList->end(); ++i){
 
         std::cout <<"Account " << i->GetAccountNumber() << ": Balance - " << i->CheckBalance() << " $ , Account Password - " << i->GetPassword()  << std::endl;
@@ -74,6 +67,26 @@ Account* BankDB::FindAccountByNumber(int accountNumber ){
 
 }
 
+void BankDB::ChargeFee() {
+    int low = 2;
+    int high = 4;
+    int gain = 0;
+    std::stringstream ss;
+
+    float fee = low + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(high-low)));
+
+    for (auto i  = _accountsList->begin(); i !=_accountsList->end(); ++i){
+        if (!i->CheckIsVIP()) // charge only the non VIP
+        {
+            gain = i->GiveInterest(fee);
+            _bankBalance = _bankBalance + gain;
+            ss <<"Bank: commissions of " << fee <<" % were charged, the bank gained " << gain << " $ from account " << i->GetAccountNumber() << std::endl;
+            logF.WriteLogLine(ss.str());
+        }
+
+    }
+
+}
 
 
 

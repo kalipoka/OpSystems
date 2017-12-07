@@ -31,7 +31,10 @@ public:
 
 
     void PrintAccounts();   // also should be as a thread?
+
     int GetBankBalance();
+
+    void ChargeFee();
 
 
 

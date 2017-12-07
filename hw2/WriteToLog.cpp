@@ -35,6 +35,7 @@ void WriteToLog::WriteLogLine(string str) {
     }
     if (DEBUG) std::cout << "Error " << std::endl;
     myLog << str;
+
     if (pthread_mutex_unlock(&loglock)) {
         perror("loglock Could not be unlocked");
         exit(1);

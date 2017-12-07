@@ -15,3 +15,6 @@ Error 1: Your transaction failed – password for account id 1001 is incorrect
 1: Transfer 300 from account 1001 to account 2002 new account balance is 250 new target account balance is 320
 Error 1: Your transaction failed – account id 1001 balance is lower than 5000
 Error 1: Your transaction failed – password for account id 1001 is incorrect
+Bank: commissions of 3.38 % were charged, the bank gained 24 $ from account 1050
+Bank: commissions of 3.38 % were charged, the bank gained 24 $ from account 1050
+Bank: commissions of 3.38 % were charged, the bank gained 11 $ from account 2002

@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <math.h>
 #include "Account.h"
 
 using std::cout;
@@ -65,5 +66,15 @@ int Account::Withdrawal(int withdrawalAmmount) {
         _balance = _balance - withdrawalAmmount;
         return 0;  // withdrawal succesfull
     }
+
+}
+
+int Account::GiveInterest(double percent) {
+
+    double fee = (percent/100)*_balance;
+    int rounded_fee = round(fee);
+    _balance = _balance - rounded_fee;
+
+    return rounded_fee;                 // not sure if what i
 
 }
