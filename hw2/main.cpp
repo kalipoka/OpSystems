@@ -4,7 +4,7 @@
 #include "Threads.h"
 #include "WriteToLog.h"
 
-
+//*****************564zfdhfgjjklzdlgnkDLnk
 using namespace std;
 
 WriteToLog logF;
@@ -20,7 +20,7 @@ int main (int argc, char **argv){
     // This is the version without concurrency
     BankDB Citi;// = BankDB();
     ATM tryATM(1, &Citi);
-    tryATM.ReadCommandsFromFile("C:\\Users\\alexey\\Source\\Repos\\OpSystems\\hw2\\in1.txt");
+    tryATM.ReadCommandsFromFile("D:\\semesters\\Winter_2018\\046209\\HW2_withGIT\\OpSystems\\hw2\\in1.txt");
     Citi.PrintAccounts();
     Citi.ChargeFee();
 
