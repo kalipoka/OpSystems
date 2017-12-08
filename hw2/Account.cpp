@@ -69,9 +69,10 @@ int Account::Withdrawal(int withdrawalAmmount) {
 
 }
 
-int Account::GiveInterest(double percent) {
+int Account::GiveInterest(int percent) {
 
-    double fee = (percent/100)*_balance;
+    double per = double(percent);
+    double fee =((per/100)*_balance);
     int rounded_fee = round(fee);
     _balance = _balance - rounded_fee;
 

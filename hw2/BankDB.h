@@ -7,12 +7,15 @@
 #include <sstream>
 #include <iostream>
 #include <list>
+#include <stdlib.h>
 #include <string>
+#include <time.h>
 #include <thread>
 #include <algorithm>
 #include "Account.h"
 #include "ATM.h"
 #include "WriteToLog.h"
+#include <cstdlib>
 
 extern WriteToLog logF;
 
@@ -27,23 +30,24 @@ public:
 
     Account* FindAccountByNumber(int accountNumber );
 
-    void ChargeInterest();   //Should be as a thread
-
-
     void PrintAccounts();   // also should be as a thread?
 
     int GetBankBalance();
 
     void ChargeFee();
 
+    void close();
+
 
 
 
 private:
 
+    bool _isOpen;
     int _bankBalance;
     int _numberOfAccounts;
     std::list<Account>* _accountsList;
+    pthread_mutex_t bankDBLock;
 };
 
 bool CompareFunction (Account Acc1,Account Acc2 );

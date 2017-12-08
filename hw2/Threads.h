@@ -15,9 +15,11 @@ struct thread_data_atm {
 
 };
 
-void *thread_atm (void *arguments);
+void *thread_atm (void *arguments);  //
 
-void *thread_bank_print(void* args);
+void *thread_bank_print(void* args); // thread for the printing of the bank
+
+void *thread_bank_charge(void* args);  // thread for the commision charge of the bank
 
 //
 

@@ -8,12 +8,15 @@
 
 void *thread_atm (void *arguments){
 
-    if(DEBUG) std::cout << "Entered Creating Thread" << std::endl;
+     std::cout << "Entered Creating ATM Thread \n" << std::endl;
 
     thread_data_atm* temp = static_cast<thread_data_atm *> (arguments);
     string path = string(temp->pathToInstructions);
     ATM workATM(temp->atm_id,temp->DB); // created an operating atm;
     workATM.ReadCommandsFromFile(path);
+
+    std::cout << "Exit ATM1 Thread \n" << std::endl;
+
     pthread_exit(NULL);
 };
 
@@ -21,13 +24,28 @@ void *thread_atm (void *arguments){
 
 void *thread_bank_print(void* args) {
 
-   if(DEBUG) std::cout << "Entered Print Thread" << std::endl;
+    std::cout << "Entered Print Thread \n" << std::endl;
 
     BankDB* temp = static_cast<BankDB *>(args) ;
-    printf("\033[2J");
-    printf("\033[1;1H");
-    cout << "Current Bank Status" << endl;
+
     temp->PrintAccounts();
-    cout << "The Bank has " << temp->GetBankBalance() << " $" << endl;
+
+    std::cout << "Exit Print Thread \n" << std::endl;
+
     pthread_exit(NULL);
+}
+
+void *thread_bank_charge(void* args){
+
+    std::cout << "Entered Fee Charge Thread \n" << std::endl;
+
+    BankDB* temp = static_cast<BankDB *>(args) ;
+    temp->ChargeFee();
+
+    std::cout << "Exit Fee Charge Thread \n" << std::endl;
+
+
+    pthread_exit(NULL);
+
+
 }

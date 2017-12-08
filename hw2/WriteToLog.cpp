@@ -29,10 +29,12 @@ WriteToLog::~WriteToLog() {
 }
 
 void WriteToLog::WriteLogLine(string str) {
+
     if (pthread_mutex_lock(&loglock)) {
         perror("loglock Could not be locked");
         exit(1);
     }
+
     if (DEBUG) std::cout << "Error " << std::endl;
     myLog << str;
 
